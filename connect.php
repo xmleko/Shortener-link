@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-
+####
 function connectWithDb() {
     global $servername, $username, $password, $dbname;
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -63,8 +63,9 @@ function getOrginalLinkFromDb($conn, $shortCode = null) {
             return;
         }
 
-        $shortCode = readline("Enter the short code: ");
     }
+
+    $shortCode = readline("Enter the short code: ");
 
     $sql = "SELECT orginal FROM links WHERE new = ?";
     $stmt = $conn->prepare($sql);

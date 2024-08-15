@@ -8,4 +8,6 @@ $dbname = 'links';
 
 # short link
 $length = 6
+
+#
 ?>
